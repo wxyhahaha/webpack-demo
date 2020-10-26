@@ -1,17 +1,16 @@
 import { Init } from '../interface';
 
 export default class DemoCompoent implements Init {
+  a = {
+    b: 1
+  };
   init() {
-    const n = 'test';
-    import(`../json/${n}.json`).then(res => {
-      console.log(res);
-    });
+    setTimeout(() => {
+      this.a.b++;
+    }, 3000);
   }
 
   with() {
     const a = 1;
-    with() {
-      
-    }
   }
 }
